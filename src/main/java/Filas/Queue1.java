@@ -9,25 +9,25 @@ public class Queue1<T> {
         this.list = new LinkedList<>();
     }
 
-    void add(T element){
+    public void add(T element){
         this.list.addElementAtEnd(element);
     }
-    T peek(){
+    public T peek(){
         if (isEmpty()){
             throw new Error("Queue is empty");
         }
         return this.list.getHead().getValue();
     }
-    T remove(){
+    public T remove(){
         if (isEmpty()){
             throw new Error("Queue is empty");
         }
         return this.list.removeAtIndex(0);
     }
-    int count(){
+    public int count(){
         return this.list.getSize();
     }
-    boolean isEmpty(){
+    public boolean isEmpty(){
         return this.list.isEmpty();
     }
 
